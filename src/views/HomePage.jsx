@@ -1,18 +1,17 @@
 import { useEffect, useState } from 'react';
 import { fetchData } from '../api/api.js';
 import CandyCard from '../Components/CandyCard.jsx';
+import { loadData } from '../actions/actionTypes.js';
+import { useDispatch, useSelector } from 'react-redux';
 
 function HomePage() {
-    const [allCandy, setAllCandy] = useState([]);
+    const allCandy = useSelector(state => state.candy);
+    const dispatch = useDispatch();
 
     useEffect(() => {
-        console.log('useEffect körs')
-        async function fetch() {
-            const data = await fetchData();
-            setAllCandy(data);
-        }
-        fetch();
+        dispatch(loadData());
     }, [])
+    
 
     const candyCards = allCandy.map(item => <CandyCard item={item} key={item.id} />)
 

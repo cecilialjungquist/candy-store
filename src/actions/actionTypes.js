@@ -1,3 +1,5 @@
+import { fetchData } from "../api/api"
+
 // actions/: 
 //Innehåller alla Redux actions och deras typer. 
 // actionTypes.js kan användas för att definiera konstanter för actionstyper, 
@@ -25,4 +27,27 @@ const logIn = () => {
     }
 }
 
-export { addToCart, removeFromCart, logIn };
+// const loadData = (data) => {
+//     return {
+//         type: 'LOAD_DATA',
+//         payload: data
+//     }
+// }
+
+// They would receive dispatch as an argument and may call it asynchronously. 
+// Such functions are called thunks. Another example of middleware is redux-promise. 
+// It lets you dispatch a Promise async action, 
+// and dispatches a normal action when the Promise resolves.
+const loadData = () => async (dispatch) => {
+    const data = await fetchData();
+    dispatch({ type: 'LOAD_DATA', payload: data });
+};
+
+const getCandy = candyId => {
+    return {
+        type: 'GET_CANDY',
+        payload: candyId
+    }
+}
+
+export { addToCart, removeFromCart, logIn, loadData, getCandy };
