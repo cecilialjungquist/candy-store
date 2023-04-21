@@ -24,3 +24,5 @@ const logIn = () => {
         type: 'SIGN_IN'
     }
 }
+
+export { addToCart, removeFromCart, logIn };

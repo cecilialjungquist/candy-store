@@ -18,3 +18,31 @@
   gap: 1rem;
   align-self: flex-end;
 }
+
+.add-btn {
+  appearance: none;
+  border: none;
+  background-color: rgb(99, 204, 210);
+  padding: .5rem 1rem;
+  border-radius: 6px;
+  box-shadow: 0px 2px 5px rgba(0, 6, 128, 0.219);
+  color: white;
+}
+.add-btn:hover {
+  box-shadow: none;
+  background-color: rgb(72, 149, 154);
+}
+
+.candy-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.candy-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  text-align: center;
+  margin: 1rem;
+}

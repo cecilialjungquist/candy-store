@@ -1,4 +1,4 @@
-const initialState = [];
+const initialState = [{ name: 'Lollie', price: '18', id: 1 }];
 
 function cartReducer(state = initialState, action) {
   // Check to see if the reducer cares about this action

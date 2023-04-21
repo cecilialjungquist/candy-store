@@ -5,16 +5,9 @@
 import { legacy_createStore } from "redux";
 import rootReducer from '../reducers/rootReducer.js';
 
-import { fetchData } from '../api/api.js';
-
-export const loadData = () => async (dispatch) => {
-  const data = await fetchData();
-  dispatch({ type: 'LOAD_DATA', payload: data });
-}
-
-
 // createStore kan endast ta EN reducer,
 // därav hooken combineReducer i rootReducer
-const store = legacy_createStore(rootReducer);
+const store = legacy_createStore(rootReducer, 
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 export default store;
