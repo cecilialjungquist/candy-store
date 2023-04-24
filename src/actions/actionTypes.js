@@ -43,4 +43,4 @@ const loadData = () => async (dispatch) => {
     dispatch({ type: 'LOAD_DATA', payload: data });
 };
 
-export { addToCart, removeFromCart, logIn, placeOrder, editQuantity, loadData };
+export { addToCart, removeFromCart, logIn, placeOrder, loadData };

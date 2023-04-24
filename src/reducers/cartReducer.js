@@ -14,9 +14,11 @@ function cartReducer(state = initialState, action) {
                     action.payload
                 ];
             } else {
-                // Annars - uppdatera quantity
-                state[index].quantity = state[index].quantity + parseInt(action.payload.quantity);
-                return [...state];
+                // Annars - kapa en kopia av state
+                const newState = [...state];
+                // Uppdatera quantity i den nya kopian
+                newState[index].quantity = state[index].quantity + parseInt(action.payload.quantity);
+                return newState;
             }
         case 'REMOVE_FROM_CART':
             const updatedState = state.filter(item => action.payload.id !== item.id);

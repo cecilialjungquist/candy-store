@@ -5,7 +5,6 @@ function AddButton({ item, quantity }) {
     const dispatch = useDispatch();
 
     function handleClick() {
-        console.log('clicked', item.name);
         dispatch(addToCart({...item, quantity}));
     }
 
