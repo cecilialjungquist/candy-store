@@ -19,7 +19,8 @@
   align-self: flex-end;
 }
 
-.add-btn {
+.add-btn,
+.primary-btn {
   appearance: none;
   border: none;
   background-color: rgb(99, 204, 210);
@@ -28,9 +29,19 @@
   box-shadow: 0px 2px 5px rgba(0, 6, 128, 0.219);
   color: white;
 }
-.add-btn:hover {
+.add-btn:hover,
+.primary-btn:hover {
   box-shadow: none;
   background-color: rgb(72, 149, 154);
+}
+
+.delete-btn {
+  appearance: none;
+  border: none;
+  background-color: rgb(108, 12, 95);
+  padding: 4px;
+  border-radius: 4px;
+  color: white;
 }
 
 .candy-cards {
@@ -45,4 +56,8 @@
   padding: 1rem;
   text-align: center;
   margin: 1rem;
+}
+
+.price-col {
+  justify-self: flex-end;
 }

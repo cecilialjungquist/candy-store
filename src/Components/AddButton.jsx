@@ -1,12 +1,12 @@
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../actions/actionTypes.js';
 
-function AddButton({ item }) {
+function AddButton({ item, quantity }) {
     const dispatch = useDispatch();
 
     function handleClick() {
         console.log('clicked', item.name);
-        dispatch(addToCart(item));
+        dispatch(addToCart({...item, quantity}));
     }
 
     return (  

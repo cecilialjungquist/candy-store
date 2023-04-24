@@ -54,9 +54,21 @@ ul {
 
 article {
   max-width: 250px;
-  padding: 0 .5rem;
-  display: flex;
+  padding: 0 0.5rem;
+  display: grid;
+  gap: .5rem;
+  grid-template-columns: 2fr 1fr 1fr .5fr;
   border: 1px solid pink;
   align-items: center;
-  justify-content: space-between;
+  border-radius: 6px;
+  background-color: #ffafcc;
+}
+
+input {
+  appearance: none;
+  border: none;
+  background-color: #ffffff63;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 1.2rem;
 }

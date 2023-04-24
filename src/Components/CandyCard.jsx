@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import AddButton from "./AddButton.jsx";
+import AddToCart from "./AddToCart.jsx";
 
 function CandyCard({ item }) {
 
@@ -10,7 +11,7 @@ function CandyCard({ item }) {
                 <p>{item.price} kr</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, enim!</p>
             </NavLink>
-            <AddButton item={item} />
+            <AddToCart item={item} />
         </article>
     );
 }

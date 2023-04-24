@@ -27,12 +27,12 @@ const logIn = () => {
     }
 }
 
-// const loadData = (data) => {
-//     return {
-//         type: 'LOAD_DATA',
-//         payload: data
-//     }
-// }
+const editQuantity = item => {
+    return {
+        type: 'EDIT_QUANTITY',
+        payload: item
+    }
+}
 
 // They would receive dispatch as an argument and may call it asynchronously. 
 // Such functions are called thunks. Another example of middleware is redux-promise. 
@@ -43,11 +43,4 @@ const loadData = () => async (dispatch) => {
     dispatch({ type: 'LOAD_DATA', payload: data });
 };
 
-const getCandy = candyId => {
-    return {
-        type: 'GET_CANDY',
-        payload: candyId
-    }
-}
-
-export { addToCart, removeFromCart, logIn, loadData, getCandy };
+export { addToCart, removeFromCart, logIn, editQuantity, loadData };
