@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { editQuantity } from "../actions/actionTypes";
 import AddButton from "./AddButton";
 
 function AddToCart({ item }) {

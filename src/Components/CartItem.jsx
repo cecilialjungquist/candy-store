@@ -5,7 +5,7 @@ function CartItem({ item }) {
     const dispatch = useDispatch();
 
     function handleClick() {
-        dispatch(removeFromCart(item))
+        dispatch(removeFromCart(item));
     }
 
     return (  

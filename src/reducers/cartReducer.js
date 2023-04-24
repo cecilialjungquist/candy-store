@@ -5,14 +5,24 @@ function cartReducer(state = initialState, action) {
 
     switch (action.type) {
         case 'ADD_TO_CART':
-            return [
-                ...state,
-                // Make a copy and add the new obj
-                action.payload
-            ];
+            // Kolla om den finns i cart
+            const index = state.findIndex(item => item.id === action.payload.id);
+            if (index === -1) {
+                return [
+                    ...state,
+                    // Om inte, lägg till
+                    action.payload
+                ];
+            } else {
+                // Annars - uppdatera quantity
+                state[index].quantity = state[index].quantity + parseInt(action.payload.quantity);
+                return [...state];
+            }
         case 'REMOVE_FROM_CART':
             const updatedState = state.filter(item => action.payload.id !== item.id);
             return updatedState;
+        case 'PLACE_ORDER':
+            return initialState;
         default:
             // otherwise return the existing state unchanged
             return state;

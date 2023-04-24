@@ -20,7 +20,8 @@
 }
 
 .add-btn,
-.primary-btn {
+.primary-btn,
+.order-btn {
   appearance: none;
   border: none;
   background-color: rgb(99, 204, 210);
@@ -30,9 +31,14 @@
   color: white;
 }
 .add-btn:hover,
-.primary-btn:hover {
+.primary-btn:hover,
+.order-btn:hover {
   box-shadow: none;
   background-color: rgb(72, 149, 154);
+}
+
+.order-btn {
+  margin-top: 1rem;
 }
 
 .delete-btn {
@@ -60,4 +66,9 @@
 
 .price-col {
   justify-self: flex-end;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
 }
