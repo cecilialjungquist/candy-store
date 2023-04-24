@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import AddButton from "./AddButton.jsx";
 import AddToCart from "./AddToCart.jsx";
 
 function CandyCard({ item }) {

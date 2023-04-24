@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-import { fetchData } from '../api/api.js';
+import { useEffect } from 'react';
 import CandyCard from '../Components/CandyCard.jsx';
 import { loadData } from '../actions/actionTypes.js';
 import { useDispatch, useSelector } from 'react-redux';
